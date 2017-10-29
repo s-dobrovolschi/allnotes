@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { NoteSearchResultComponent } from './notes/note-search-result/note-searc
 import { AuthComponent } from './auth/auth.component';
 import { SharedComponent } from './shared/shared.component';
 import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
+
+import {PanelModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
     NoteDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
