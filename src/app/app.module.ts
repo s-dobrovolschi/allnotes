@@ -11,6 +11,7 @@ import { SharedComponent } from './shared/shared.component';
 import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
 
 import {PanelModule} from 'primeng/primeng';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {PanelModule} from 'primeng/primeng';
     NoteSearchResultComponent,
     AuthComponent,
     SharedComponent,
-    NoteDetailComponent
+    NoteDetailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
