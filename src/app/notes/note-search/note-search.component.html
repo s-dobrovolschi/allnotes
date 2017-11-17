@@ -1,8 +1,19 @@
 <p-panel header="Search" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
-  <div class="ui-g">
-    <div class="ui-g-12">Label: Search notes</div>
-    <div class="ui-g-9">Search input</div>
-    <div class="ui-g-2 ui-g-offset-1">Search button</div>
-  </div>
+<div class="ui-g">
+	<div class="ui-g-12">Label: Search notes</div>
+	<div class="ui-g-8">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-user"></i></span>
+			<input [(ngModel)]="searchString" placeholder="Customer number | Title | Author">
+		</div>
+	</div>
+	<div class="ui-g-2">
+		<button type="button" class="btn btn-primary" (click)="onSearch()">Search</button>
+	</div>
+	<div class="ui-g-2">
+		<button type="button" class="btn btn-warning" (click)="onClear()">Clear</button>
+	</div>
+</div>
 </p-panel>
-
+<app-note-search-result (noteSelection)="onNoteSelection($event)" [notes]="searchResult"></app-note-search-result>
+<app-note-detail [note]="selectedNote"></app-note-detail>

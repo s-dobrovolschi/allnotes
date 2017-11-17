@@ -1,0 +1,16 @@
+{
+  "/api": {
+    "target": "http://localhost.revenuedomain.ie:8080/allnotes/rest",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/central-security-web" : {
+    "target": "http://127.0.0.1:3000",
+    "secure": false,
+    "pathRewrite": {
+      "^/central-security-web": ""
+    }
+  }
+}
