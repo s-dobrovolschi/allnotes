@@ -1,4 +1,4 @@
-<p-panel header="Result" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+<p-panel *ngIf="render" header="Result" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
   <div class="ui-g">
     <div class="ui-g-12 ui-g-nopad">
       <div *ngIf="customer; else noCustomerFoundBlock">

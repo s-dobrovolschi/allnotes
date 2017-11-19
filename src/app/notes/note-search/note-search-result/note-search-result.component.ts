@@ -14,6 +14,7 @@ export class NoteSearchResultComponent implements OnInit {
   note: Note;
   @Input() customer: Customer;
   @Input() notes: Note[];
+  @Input() render: boolean;
   @Output() noteSelection = new EventEmitter<Note>();
 
   constructor(private notesService: NotesService) {}

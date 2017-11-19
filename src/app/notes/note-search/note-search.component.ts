@@ -16,6 +16,8 @@ export class NoteSearchComponent implements OnInit {
   searchResult: Note[];
   selectedNote: Note;
   customerFound: Customer;
+  createNoteAction: boolean = false;
+  searchCustomerAction: boolean = false;
 
   constructor(private notesService: NotesService, private customersService: CustomersService) {}
 
@@ -26,6 +28,7 @@ export class NoteSearchComponent implements OnInit {
     this.searchResult = null;
     this.selectedNote = null;
     this.customerFound = null;
+    this.searchCustomerAction = true;
     this.customersService.searchCustomer(this.searchString).subscribe(
       result => {
         if(result){
@@ -46,15 +49,21 @@ export class NoteSearchComponent implements OnInit {
     console.log(this.searchResult);
   }
 
-  onClear() {
+  onClear(): void {
     this.searchResult = null;
     this.searchString = '';
     this.selectedNote = null;
     this.customerFound = null;
+    this.searchCustomerAction = false;
+    this.createNoteAction = false;
   }
 
   onNoteSelection(selectedNote: Note) {
     this.selectedNote = selectedNote;
+  }
+
+  onCreateNote(){
+    this.createNoteAction = true;
   }
 
 }

@@ -17,6 +17,7 @@ import {DataTableModule} from 'primeng/primeng';
 import {ToolbarModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
 import {DialogModule} from "primeng/components/dialog/dialog";
+import { NoteCreateComponent } from './notes/note-search/note-create/note-create.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {DialogModule} from "primeng/components/dialog/dialog";
     SharedComponent,
     NoteDetailComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    NoteCreateComponent
   ],
   imports: [
     BrowserModule,
