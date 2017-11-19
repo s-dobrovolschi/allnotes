@@ -1,0 +1,16 @@
+{
+  "/api/customers/1/notes": {
+    "target": "http://localhost:4200/assets/mock/notes/Mock_NotesByCustomerNumber.json",
+    "secure": false,
+    "pathRewrite": {
+      "^/api.*": ""
+    }
+  },
+  "/api/customers/1": {
+    "target": "http://localhost:4200/assets/mock/customers/Mock_Customer.json",
+    "secure": false,
+    "pathRewrite": {
+      "^/api.*": ""
+    }
+  }
+}

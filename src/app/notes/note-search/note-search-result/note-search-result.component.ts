@@ -1,6 +1,7 @@
 import {Note} from '../../../domain/model/note';
 import {NotesService} from '../../../domain/service/notes.service';
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {Customer} from "../../../domain/model/customer";
 
 @Component({
   selector: 'app-note-search-result',
@@ -11,6 +12,7 @@ import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 export class NoteSearchResultComponent implements OnInit {
 
   note: Note;
+  @Input() customer: Customer;
   @Input() notes: Note[];
   @Output() noteSelection = new EventEmitter<Note>();
 

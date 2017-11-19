@@ -1,22 +1,30 @@
-<div class="ui-g">
-  <div class="ui-g-12 ui-g-nopad">
-    <p-panel header="Result" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
-		<div class="col-md-12">
-			<span *ngIf="notes">
-			<p-dataTable [value]="notes" selectionMode="single" [(selection)]="note" (click)="showSelectionDetails()" dataKey="id">
-			    <p-column field="id" header="Note Id"></p-column>
-			    <p-column field="customerNumber" header="Customer Number"></p-column>
-			    <p-column field="customerName" header="Customer Name"></p-column>
-			    <p-column field="title" header="Title"></p-column>
-			    <p-column field="dateCreated" header="Creation Date"></p-column>
-			    <p-column field="dateModified" header="Update Date"></p-column>
-			    <p-column field="author.id" header="Username"></p-column>
-			    <p-column field="status" header="Status"></p-column>
-			</p-dataTable>
-			</span>				
-		</div>
-    </p-panel>
+<p-panel header="Result" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+  <div class="ui-g">
+    <div class="ui-g-12 ui-g-nopad">
+      <div *ngIf="customer; else noCustomerFoundBlock">
+        <h4>{{customer.customerNumber}} - {{customer.lastName}}, {{customer.firstName}}</h4>
+      </div>
+      <ng-template #noCustomerFoundBlock>No customer found.</ng-template>
+      <div *ngIf="notes; else noNotesFoundBlock">
+        <h5>( {{notes.length}} results found )</h5>
+        <p-dataTable [value]="notes" selectionMode="single" [(selection)]="note" (click)="showSelectionDetails()"
+                     dataKey="id" [rows]="10" [paginator]="true">
+          <p-column field="id" header="Note Id"><i class="fa fa-user"></i></p-column>
+          <p-column field="title" header="Title" filter="true" filterMatchMode="contains" [style]="{'width':'30%'}"></p-column>
+          <p-column field="dateCreated" header="Date created"></p-column>
+          <p-column field="author.id" header="Author"></p-column>
+          <p-column field="status" header="Status"></p-column>
+          <p-column header="Attachments">
+            <ng-template let-note="rowData" pTemplate="body">
+              <div *ngIf="note.attachments" style="text-align:center"><span class="badge">{{note.attachments.length}}</span><i class="fa fa-paperclip fa-2x"></i></div>
+            </ng-template>
+          </p-column>
+        </p-dataTable>
+      </div>
+      <ng-template #noNoteFoundBlock>No note found for the customer</ng-template>
+    </div>
   </div>
-</div>
+</p-panel>
+
 
 

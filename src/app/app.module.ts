@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { NoteSearchComponent } from './notes/note-search/note-search.component';
@@ -10,13 +9,14 @@ import { AuthComponent } from './auth/auth.component';
 import { SharedComponent } from './shared/shared.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-import {PanelModule} from 'primeng/primeng';
 import { HeaderComponent } from './header/header.component';
 import { NoteDetailComponent } from './notes/note-search/note-detail/note-detail.component';
+import {LoginComponent} from "./header/login/login.component";
+import {PanelModule} from 'primeng/primeng';
 import {DataTableModule} from 'primeng/primeng';
 import {ToolbarModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
+import {DialogModule} from "primeng/components/dialog/dialog";
 
 @NgModule({
   declarations: [
@@ -27,16 +27,19 @@ import {ButtonModule} from 'primeng/primeng';
     AuthComponent,
     SharedComponent,
     NoteDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    PanelModule,
     FormsModule,
     HttpClientModule,
-    DataTableModule,
+    // PrimeNG Modules Declaration
     ToolbarModule,
+    PanelModule,
+    DataTableModule,
+    DialogModule,
     ButtonModule
   ],
   providers: [],
