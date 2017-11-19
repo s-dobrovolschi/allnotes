@@ -1,8 +1,9 @@
 .layout-topbar {
   background-color: #025f63;
+  border-bottom: 14px solid #00c6c6;
   display: block;
   padding: 0;
-  height: 70px;
+  height: 72px;
   box-sizing: border-box;
   position: fixed;
   top: 0;
