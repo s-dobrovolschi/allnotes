@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Note} from "../../../domain/model/note";
+import {MessageService} from "primeng/components/common/messageservice";
 
 @Component({
   selector: 'app-note-create',
@@ -14,12 +15,13 @@ export class NoteCreateComponent implements OnInit {
   private _source: string;
   private _content: string;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
   }
 
   onSave(){
+    this.messageService.add({severity:'success', summary:'Note saved successfully', detail:'New note has been created'});
     console.log(this._title);
   }
 

@@ -2,3 +2,10 @@
   margin-top: 80px;
 }
 
+>>> .ui-growl {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 20em;
+}
+

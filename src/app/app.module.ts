@@ -17,7 +17,9 @@ import {DataTableModule} from 'primeng/primeng';
 import {ToolbarModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
 import {DialogModule} from "primeng/components/dialog/dialog";
+import {GrowlModule} from 'primeng/primeng';
 import { NoteCreateComponent } from './notes/note-search/note-create/note-create.component';
+import {MessageService} from 'primeng/components/common/messageservice';
 
 @NgModule({
   declarations: [
@@ -42,9 +44,10 @@ import { NoteCreateComponent } from './notes/note-search/note-create/note-create
     PanelModule,
     DataTableModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    GrowlModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

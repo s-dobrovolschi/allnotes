@@ -3,6 +3,7 @@ import {NotesService} from '../../domain/service/notes.service';
 import {Component, OnInit} from '@angular/core';
 import {CustomersService} from "../../domain/service/customers.service";
 import {Customer} from "../../domain/model/customer";
+import {MessageService} from "primeng/components/common/messageservice";
 
 @Component({
   selector: 'app-note-search',
@@ -19,7 +20,7 @@ export class NoteSearchComponent implements OnInit {
   createNoteAction: boolean = false;
   searchCustomerAction: boolean = false;
 
-  constructor(private notesService: NotesService, private customersService: CustomersService) {}
+  constructor(private notesService: NotesService, private customersService: CustomersService, private messageService: MessageService) {}
 
   ngOnInit() {
   }
