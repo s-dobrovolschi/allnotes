@@ -1,33 +1,88 @@
 <p-panel *ngIf="note" header="Note details" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
-  <div class="ui-g">
-    <div class="ui-g-12 ui-g-nopad">
-      <p-toolbar>
-        <div class="ui-toolbar-group-left">
-          <button pButton type="button" label="New" icon="fa-plus"></button>
-          <button pButton type="button" label="Open" icon="fa-folder-open"></button>
-
-          <i class="fa fa-bars"></i>
-        </div>
-
-        <div class="ui-toolbar-group-right">
-          <button pButton type="button" label="Save" icon="fa-search"></button>
-          <i class="fa fa-bars"></i>
-          <button pButton type="button" label="Edit" icon="fa-refresh"></button>
-          <button pButton type="button" label="Delete" icon="fa-trash"></button>
-        </div>
-      </p-toolbar>
-      <div>
-        <h4>{{note.title}}</h4>
-      </div>
-      <h5>Created by {{note.author.firstName}}, {{note.author.lastName}} on {{note.dateCreated}}</h5>
-      <span *ngIf="note.lastModifiedBy && note.dateModified">
-					<h5>Last modified by {{note.lastModifiedBy.firstName}}, {{note.lastModifiedBy.lastName}} on {{note.dateModified}}</h5>
-				</span>
-      <h4>Source:</h4>
-      <input type="text" pInputText placeholder="Username" [(ngModel)]="note.source" disabled="true">
-      <h4>Note:</h4>
-      <textarea rows="5" cols="100" pInputTextarea [(ngModel)]="note.content" disabled="true"></textarea>
-    </div>
-  </div>
+<div class="ui-g">
+	<div class="ui-g-12 ui-g-nopad">
+		<p-toolbar>
+		<div class="ui-toolbar-group-right">
+			<button pButton type="button" label="Save" icon="fa-floppy-o"></button>
+			<i class="fa fa-bars"></i>
+			<button pButton type="button" label="Edit" icon="fa-pencil"></button>
+			<button pButton type="button" label="Delete" icon="fa-trash"></button>
+		</div>
+		</p-toolbar>
+		<div>
+			<h4>{{note.title}}</h4>
+		</div>
+		<h5>Created by {{note.author.firstName}}, {{note.author.lastName}} on {{note.dateCreated}}</h5>
+		<span *ngIf="note.lastModifiedBy && note.dateModified">
+			<h5>Last modified by {{note.lastModifiedBy.firstName}}, {{note.lastModifiedBy.lastName}} on
+				{{note.dateModified}}</h5>
+		</span>
+	</div>
+</div>
+<hr>
+<div class="ui-g">
+	<div class="ui-g-6 ui-g-nopad">
+		<h4>Source:</h4>
+		<input type="text" pInputText placeholder="Username" [(ngModel)]="note.source" disabled="true">
+		<h4>Note:</h4>
+		<textarea rows="5" cols="75" pInputTextarea [(ngModel)]="note.content" disabled="true"></textarea>
+	</div>
+	<div class="ui-g-6 an-vertical-rule">
+		<div class="ui-g-12 ui-g-nopad">
+			<h4>Attachments:</h4>
+			<p-panel header="Proof of payment ref taxation year 2015.pdf" [toggleable]="true" [collapsed]="true">
+				<div class="ui-g">
+					<div class="ui-g-1 ui-g-nopad">
+						<i class="fa fa-file-pdf-o fa-2x"></i>
+					</div>
+					<div class="ui-g-9"><strong>Proof of payment ref taxation year 2015</strong></div>
+					<div class="ui-g-2"><button pButton type="button" icon="fa-trash-o" label="Delete" class="ui-button-danger"></button></div>
+					<div class="ui-g-4 ui-g-nopad">Created:</div>
+					<div class="ui-g-8">19/11/2017</div>
+					<div class="ui-g-4 ui-g-nopad">Modified:</div>
+					<div class="ui-g-8">20/11/2017</div>
+					<div class="ui-g-4 ui-g-nopad">File type:</div>
+					<div class="ui-g-8">PDF</div>
+					<div class="ui-g-4 ui-g-nopad">Status:</div>
+					<div class="ui-g-8">ACTIVE</div>
+				</div>
+			</p-panel>
+			<p-panel header="Customer PPS Number scan.docx" [toggleable]="true"  [collapsed]="true">
+				<div class="ui-g">
+					<div class="ui-g-1 ui-g-nopad">
+						<i class="fa fa fa-file-word-o fa-2x"></i>
+					</div>
+					<div class="ui-g-9"><strong>Customer PPS Number scan.pdf</strong></div>
+					<div class="ui-g-2"><button pButton type="button" icon="fa-trash-o" label="Delete" class="ui-button-danger"></button></div>
+					<div class="ui-g-4 ui-g-nopad">Created:</div>
+					<div class="ui-g-8">19/11/2017</div>
+					<div class="ui-g-4 ui-g-nopad">Modified:</div>
+					<div class="ui-g-8">20/11/2017</div>
+					<div class="ui-g-4 ui-g-nopad">File type:</div>
+					<div class="ui-g-8">PDF</div>
+					<div class="ui-g-4 ui-g-nopad">Status:</div>
+					<div class="ui-g-8">ACTIVE</div>
+				</div>
+			</p-panel>
+			<p-panel header="Tax Credit 2015.pdf" [toggleable]="true" [collapsed]="true">
+				<div class="ui-g">
+					<div class="ui-g-1 ui-g-nopad">
+						<i class="fa fa-file-pdf-o fa-2x"></i>
+					</div>
+					<div class="ui-g-9"><strong>Tax Credit 2015</strong></div>
+					<div class="ui-g-2"><button pButton type="button" icon="fa-trash-o" label="Delete" class="ui-button-danger"></button></div>
+					<div class="ui-g-4 ui-g-nopad">Created:</div>
+					<div class="ui-g-8">19/11/2017</div>
+					<div class="ui-g-4 ui-g-nopad">Modified:</div>
+					<div class="ui-g-8">20/11/2017</div>
+					<div class="ui-g-4 ui-g-nopad">File type:</div>
+					<div class="ui-g-8">PDF</div>
+					<div class="ui-g-4 ui-g-nopad">Status:</div>
+					<div class="ui-g-8">ACTIVE</div>
+				</div>
+			</p-panel>
+		</div>
+	</div>
+</div>
 </p-panel>
 

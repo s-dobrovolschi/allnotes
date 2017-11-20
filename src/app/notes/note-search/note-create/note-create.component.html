@@ -16,7 +16,8 @@
       <h4>Source:</h4>
       <input type="text" pInputText placeholder="Source" [(ngModel)]="_source">
       <h4>Note:</h4>
-      <textarea rows="5" cols="100" pInputTextarea [(ngModel)]="_content"></textarea>
+<!--       <textarea rows="5" cols="100" pInputTextarea [(ngModel)]="_content"></textarea> -->
+      <p-editor [(ngModel)]="_content" [style]="{'height':'320px'}"></p-editor>
     </div>
   </div>
 </p-panel>

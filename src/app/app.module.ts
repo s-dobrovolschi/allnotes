@@ -11,13 +11,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NoteDetailComponent } from './notes/note-search/note-detail/note-detail.component';
-import {LoginComponent} from "./header/login/login.component";
+import {LoginComponent} from './header/login/login.component';
 import {PanelModule} from 'primeng/primeng';
 import {DataTableModule} from 'primeng/primeng';
 import {ToolbarModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
-import {DialogModule} from "primeng/components/dialog/dialog";
+import {DialogModule} from 'primeng/components/dialog/dialog';
 import {GrowlModule} from 'primeng/primeng';
+import {EditorModule} from 'primeng/primeng';
+import {OrderListModule} from 'primeng/primeng';
 import { NoteCreateComponent } from './notes/note-search/note-create/note-create.component';
 import {MessageService} from 'primeng/components/common/messageservice';
 
@@ -45,7 +47,9 @@ import {MessageService} from 'primeng/components/common/messageservice';
     DataTableModule,
     DialogModule,
     ButtonModule,
-    GrowlModule
+    GrowlModule,
+    EditorModule,
+    OrderListModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
