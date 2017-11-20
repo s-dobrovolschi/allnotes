@@ -25,12 +25,50 @@
 		<h4>Source:</h4>
 		<input type="text" pInputText placeholder="Username" [(ngModel)]="note.source" disabled="true">
 		<h4>Note:</h4>
-		<textarea rows="5" cols="75" pInputTextarea [(ngModel)]="note.content" disabled="true"></textarea>
+		
+		
+			<div class="an-message-left">
+				<div class="ui-g">
+					<div class="ui-g-6 ui-g-nopad">
+						<h4>sdobrovo</h4>
+					</div>
+					<div class="ui-g-6">
+						<i class="fa fa-clock-o"></i><span> 16:21 20/11/2017</span>
+					</div>
+					<p>Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain</p>
+				</div>
+			</div>
+			<div class="an-message-right">
+				<div class="ui-g">
+					<div class="ui-g-6 ui-g-nopad">
+						<h4>sdobrovo</h4>
+					</div>
+					<div class="ui-g-6">
+						<i class="fa fa-clock-o"></i><span> 16:21 20/11/2017</span>
+					</div>
+					<p>Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain</p>
+				</div>
+			</div>
+			<div class="an-message-left">
+				<div class="ui-g">
+					<div class="ui-g-6 ui-g-nopad">
+						<h4>sdobrovo</h4>
+					</div>
+					<div class="ui-g-6">
+						<i class="fa fa-clock-o"></i><span> 16:21 20/11/2017</span>
+					</div>
+					<p>Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain</p>
+				</div>
+			</div>
+		
+		
+		<textarea rows="3" cols="75" pInputTextarea [(ngModel)]="note.content"></textarea>
+		<button pButton type="button" label="Send" icon="fa-pencil" class="ui-button-warning"></button>
 	</div>
 	<div class="ui-g-6 an-vertical-rule">
 		<div class="ui-g-12 ui-g-nopad">
 			<h4>Attachments:</h4>
-			<p-panel header="Proof of payment ref taxation year 2015.pdf" [toggleable]="true" [collapsed]="true">
+			<p-panel header="Proof of payment ref taxation year 2015.pdf" [toggleable]="true" [collapsed]="false">
 				<div class="ui-g">
 					<div class="ui-g-1 ui-g-nopad">
 						<i class="fa fa-file-pdf-o fa-2x"></i>
