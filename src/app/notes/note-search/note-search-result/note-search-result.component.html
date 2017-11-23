@@ -9,7 +9,7 @@
         <h5>( {{notes.length}} results found )</h5>
         <p-dataTable [value]="notes" selectionMode="single" [(selection)]="note" (click)="showSelectionDetails()"
                      dataKey="id" [rows]="10" [paginator]="true">
-          <p-column field="id" header="Note Id"><i class="fa fa-user"></i></p-column>
+<!--           <p-column field="id" header="Note Id"><i class="fa fa-user"></i></p-column> -->
           <p-column field="title" header="Title" filter="true" filterMatchMode="contains" [style]="{'width':'30%'}"></p-column>
           <p-column field="dateCreated" header="Date created"></p-column>
           <p-column field="author.id" header="Author"></p-column>
