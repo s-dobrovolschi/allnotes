@@ -1,76 +1,34 @@
 <div class="ui-g">
-				<div class="ui-g-12">
-					<p-panel class="an-attachment-header" header="Proof of payment ref taxation year 2015.pdf" [toggleable]="true"
-						[collapsed]="false">
-					<div class="ui-g">
-						<div class="ui-g-1 ui-g-nopad">
-							<i class="fa fa-file-pdf-o fa-2x"></i>
-						</div>
-						<div class="ui-g-7 ui-g-nopad">
-							<strong>Proof of payment ref taxation year 2015</strong>
-						</div>
-						<div class="ui-g-4 ui-g-nopad">
-							<p-splitButton class="an-attachment-btn" label="Download" icon="fa-download" (onClick)="download()" [model]="items"></p-splitButton>
-						</div>
-						<div class="ui-g-4 ui-g-nopad">Created:</div>
-						<div class="ui-g-8 ui-g-nopad">19/11/2017</div>
-						<div class="ui-g-4 ui-g-nopad">Modified:</div>
-						<div class="ui-g-8 ui-g-nopad">20/11/2017</div>
-						<div class="ui-g-4 ui-g-nopad">File type:</div>
-						<div class="ui-g-8 ui-g-nopad">PDF</div>
-						<div class="ui-g-4 ui-g-nopad">Status:</div>
-						<div class="ui-g-8 ui-g-nopad">ACTIVE</div>
-					</div>
-					</p-panel>
-				</div>
+	<ng-container *ngIf="attachments else noAttachmentBlock">
+	<div *ngFor="let attachment of attachments" class="ui-g-12">
+		<p-panel class="an-attachment-header" header="{{attachment.name}}" [toggleable]="true"
+			[collapsed]="false">
+		<div class="ui-g">
+			<div class="ui-g-1 ui-g-nopad">
+				<i class="fa fa-file-pdf-o fa-2x"></i>
 			</div>
-			<div class="ui-g">
-				<div class="ui-g-12">
-					<p-panel class="an-attachment-header" header="Customer PPS Number scan.docx" [toggleable]="true" [collapsed]="true">
-					<div class="ui-g">
-						<div class="ui-g-1 ui-g-nopad">
-							<i class="fa fa fa-file-word-o fa-2x"></i>
-						</div>
-						<div class="ui-g-9">
-							<strong>Customer PPS Number scan.pdf</strong>
-						</div>
-						<div class="ui-g-2">
-							<button pButton type="button" icon="fa-trash-o" label="Delete" class="ui-button-danger"></button>
-						</div>
-						<div class="ui-g-4 ui-g-nopad">Created:</div>
-						<div class="ui-g-8">19/11/2017</div>
-						<div class="ui-g-4 ui-g-nopad">Modified:</div>
-						<div class="ui-g-8">20/11/2017</div>
-						<div class="ui-g-4 ui-g-nopad">File type:</div>
-						<div class="ui-g-8">PDF</div>
-						<div class="ui-g-4 ui-g-nopad">Status:</div>
-						<div class="ui-g-8">ACTIVE</div>
-					</div>
-					</p-panel>
-				</div>
+			<div class="ui-g-7 ui-g-nopad">
+				<strong>{{attachment.name}}</strong>
 			</div>
-			<div class="ui-g">
-				<div class="ui-g-12">
-					<p-panel class="an-attachment-header" header="Tax Credit 2015.pdf" [toggleable]="true" [collapsed]="true">
-					<div class="ui-g">
-						<div class="ui-g-1 ui-g-nopad">
-							<i class="fa fa-file-pdf-o fa-2x"></i>
-						</div>
-						<div class="ui-g-9">
-							<strong>Tax Credit 2015</strong>
-						</div>
-						<div class="ui-g-2">
-							<button pButton type="button" icon="fa-trash-o" label="Delete" class="ui-button-danger"></button>
-						</div>
-						<div class="ui-g-4 ui-g-nopad">Created:</div>
-						<div class="ui-g-8">19/11/2017</div>
-						<div class="ui-g-4 ui-g-nopad">Modified:</div>
-						<div class="ui-g-8">20/11/2017</div>
-						<div class="ui-g-4 ui-g-nopad">File type:</div>
-						<div class="ui-g-8">PDF</div>
-						<div class="ui-g-4 ui-g-nopad">Status:</div>
-						<div class="ui-g-8">ACTIVE</div>
-					</div>
-					</p-panel>
-				</div>
+			<div class="ui-g-4 ui-g-nopad">
+				<p-splitButton class="an-attachment-btn" label="Download" icon="fa-download"
+					(onClick)="download()" [model]="items"></p-splitButton>
 			</div>
+			<div class="ui-g-4 ui-g-nopad">Author:</div>
+			<div class="ui-g-8 ui-g-nopad">{{attachment.author.firstName}}, {{attachment.author.lastName}}</div>
+			<div class="ui-g-4 ui-g-nopad">Created:</div>
+			<div class="ui-g-8 ui-g-nopad">{{attachment.dateCreated}}</div>
+			<div class="ui-g-4 ui-g-nopad">File type:</div>
+			<div class="ui-g-8 ui-g-nopad">{{attachment.format}}</div>
+			<div class="ui-g-4 ui-g-nopad">Status:</div>
+			<div class="ui-g-8 ui-g-nopad">{{attachment.status}}</div>
+		</div>
+		</p-panel>
+	</div>
+	</ng-container>
+	<ng-template #noAttachmentBlock>
+	<div class="ui-g-12">
+		<p>No attachment found</p>
+	</div>
+	</ng-template>
+</div>

@@ -12,5 +12,12 @@
     "pathRewrite": {
       "^/api.*": ""
     }
+  },
+  "/api/notes": {
+    "target": "http://localhost.revenuedomain.ie:8080/allnotes/rest",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
   }
 }

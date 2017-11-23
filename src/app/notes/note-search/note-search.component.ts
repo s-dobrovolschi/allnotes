@@ -1,26 +1,33 @@
+import {Attachment} from '../../domain/model/attachment';
 import {Note} from '../../domain/model/note';
 import {NotesService} from '../../domain/service/notes.service';
 import {Component, OnInit} from '@angular/core';
 import {CustomersService} from '../../domain/service/customers.service';
 import {Customer} from '../../domain/model/customer';
+import {AttachmentsService} from '../../domain/service/attachments.service';
 import {MessageService} from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'app-note-search',
   templateUrl: './note-search.component.html',
   styleUrls: ['./note-search.component.css'],
-  providers: [NotesService, CustomersService]
+  providers: [NotesService, CustomersService, AttachmentsService]
 })
 export class NoteSearchComponent implements OnInit {
 
   searchString = '';
   searchResult: Note[];
+  noteAttachments: Array<Attachment>;
   selectedNote: Note;
   customerFound: Customer;
   createNoteAction: boolean = false;
   searchCustomerAction: boolean = false;
 
-  constructor(private notesService: NotesService, private customersService: CustomersService, private messageService: MessageService) {}
+  constructor(
+    private notesService: NotesService,
+    private customersService: CustomersService,
+    private messageService: MessageService,
+    private attachmentsService: AttachmentsService) {}
 
   ngOnInit() {
   }
@@ -46,8 +53,14 @@ export class NoteSearchComponent implements OnInit {
         this.searchResult = result;
       }
     );
-    // TODO Remove - Debug
-    console.log(this.searchResult);
+  }
+
+  private _getNoteAttachments(note: Note): void {
+    this.attachmentsService.getNoteAttachments(note).subscribe(
+      result => {
+        this.noteAttachments = result;
+      }
+    );
   }
 
   onClear(): void {
@@ -60,6 +73,11 @@ export class NoteSearchComponent implements OnInit {
   }
 
   onNoteSelection(selectedNote: Note) {
+    if (selectedNote.attachments) {
+      this._getNoteAttachments(selectedNote);
+    }else {
+      this.noteAttachments = null;
+    }
     this.selectedNote = selectedNote;
   }
 

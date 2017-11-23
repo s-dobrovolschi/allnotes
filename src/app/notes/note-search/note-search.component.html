@@ -15,5 +15,5 @@
 </div>
 </p-panel>
 <app-note-search-result [render]="searchCustomerAction" (noteSelection)="onNoteSelection($event)" [customer]="customerFound" [notes]="searchResult"></app-note-search-result>
-<app-note-detail [note]="selectedNote"></app-note-detail>
+<app-note-detail [note]="selectedNote" [attachments]="noteAttachments"></app-note-detail>
 <app-note-create [render]="createNoteAction"></app-note-create>

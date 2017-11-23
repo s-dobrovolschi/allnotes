@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import { Attachment } from '../../../../domain/model/attachment';
+import {Component, OnInit, Input} from '@angular/core';
 import {MenuItem} from 'primeng/primeng';
 import {MessageService} from 'primeng/components/common/messageservice';
 
@@ -10,6 +11,7 @@ import {MessageService} from 'primeng/components/common/messageservice';
 export class NoteAttachmentComponent implements OnInit {
 
   items: MenuItem[];
+  @Input() attachments: Array<Attachment>;
 
   constructor(private messageService: MessageService) {}
 
