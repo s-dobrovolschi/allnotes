@@ -1,14 +1,14 @@
 <p-panel *ngIf="render" header="Create new note" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
   <div class="ui-g">
     <div class="ui-g-12 ui-g-nopad">
-      <p-toolbar>
+<!--       <p-toolbar> -->
         <div class="ui-toolbar-group-right">
           <button pButton type="button" label="Save" (click)="onSave()" class="ui-button-success" icon="fa-floppy-o"></button>
           <i class="fa fa-bars"></i>
           <button pButton type="button" label="Edit" icon="fa-pencil" class="ui-button-info"></button>
           <button pButton type="button" label="Delete" icon="fa-trash" class="ui-button-danger"></button>
         </div>
-      </p-toolbar>
+<!--       </p-toolbar> -->
       <h4>Title:</h4>
       <div>
         <input type="text" pInputText placeholder="Title " [(ngModel)]="_title">

@@ -1,310 +1,379 @@
 [
-  {
-    "id": "1",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "Update Sample customer note",
-    "content": "The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "c525e75f-07d1-4ff1-9e15-7f4990fe92a1",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "acafbc67-e288-46f1-865e-d54140d1",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372076242,
+                "createdBy": "sdobrovo"
+            },
+            {
+                "id": "acafbc67-e288-46f1-865e-d54140d2",
+                "content": "Need an approval from the secretary.",
+                "dateCreated": 1511372076242,
+                "createdBy": "jpmorgan"
+            },
+            {
+                "id": "acafbc67-e288-46f1-865e-d54140d3",
+                "content": "Got the approval and parking the case.",
+                "dateCreated": 1511372076242,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372076242,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "lastModifiedBy": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "63b0d2a4-6d92-4308-b695-d394dffaf4cb",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "ef2a3729-b651-45d4-8e98-0f88eab252de",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372060010,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372060010,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": {
+            "111": "Proof of payment ref taxation year 2015.pdf",
+            "333": "Proof of payment ref taxation year 2015.pdf"
+        }
     },
-    "dateCreated": 1510844975024,
-    "dateModified": 1510848906968,
-    "status": "INACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "2",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "222 Sample customer note",
-    "content": "222 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "1cc148e6-fd59-4fc0-a1e4-e3524f768b15",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "5cf3a173-5a12-4c16-b365-459c96a8eec0",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372071991,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372071991,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "lastModifiedBy": null,
-    "dateCreated": 1510844991914,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": [{"1":"Proof of payment.pdf"}]
-  },
-  {
-    "id": "3",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "333 Sample customer note",
-    "content": "333 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "1e782ccf-d751-4893-92af-6223049eed20",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "66068b9c-db84-4047-80a4-5b270b302530",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372074575,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372074575,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": {
+            "111": "Proof of payment ref taxation year 2015.pdf"
+        }
     },
-    "lastModifiedBy": null,
-    "dateCreated": 1510845003711,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "4",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "Update Sample customer note",
-    "content": "The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "609b256d-d17e-4347-9596-dbaa3e605c80",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "a56e5518-0e44-4084-ad9b-cf3560bf88cc",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372068943,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372068943,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "lastModifiedBy": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "39a4b602-49e1-438b-a02b-7702dc0593bf",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "40c508a3-f7c4-4760-bcb4-b4f32f2bf9c9",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372071092,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372071092,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "dateCreated": 1510844975024,
-    "dateModified": 1510848906968,
-    "status": "INACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "5",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "222 Sample customer note",
-    "content": "222 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "ee3bf304-3171-41cd-8efd-18e7bf686e47",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "a81a50a5-870f-4806-b8fa-7d0345b1978f",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372070060,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372070060,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "lastModifiedBy": null,
-    "dateCreated": 1510844991914,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": [{"1":"Proof of payment.pdf"}]
-  },
-  {
-    "id": "6",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "333 Sample customer note",
-    "content": "333 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "d1f8d60a-8125-4369-8b07-0163b63cd825",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "5d385f1e-0343-4ba3-b688-d7a19284fb6d",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372075421,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372075421,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "lastModifiedBy": null,
-    "dateCreated": 1510845003711,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "7",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "Update Sample customer note",
-    "content": "The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
+    {
+        "id": "5af2437b-672d-4b59-880c-6964942dd526",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "42682245-a9c4-4aad-83c8-eacaf5479753",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372073763,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372073763,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
     },
-    "lastModifiedBy": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "dateCreated": 1510844975024,
-    "dateModified": 1510848906968,
-    "status": "INACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "8",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "222 Sample customer note",
-    "content": "222 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "lastModifiedBy": null,
-    "dateCreated": 1510844991914,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": [{"1":"Proof of payment.pdf"}]
-  },
-  {
-    "id": "9",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "333 Sample customer note",
-    "content": "333 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "lastModifiedBy": null,
-    "dateCreated": 1510845003711,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "10",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "Update Sample customer note",
-    "content": "The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "lastModifiedBy": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "dateCreated": 1510844975024,
-    "dateModified": 1510848906968,
-    "status": "INACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  },
-  {
-    "id": "11",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "222 Sample customer note",
-    "content": "222 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "lastModifiedBy": null,
-    "dateCreated": 1510844991914,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": [{"1":"Proof of payment.pdf"}]
-  },
-  {
-    "id": "12",
-    "customerNumber": "4000098F",
-    "customerName": null,
-    "title": "333 Sample customer note",
-    "content": "333 The customer sent to us the soft copy as a proof of payment.",
-    "application": "DMS",
-    "category": "CUSTOMER",
-    "source": "DMS",
-    "topic": "DMS_TOPIC",
-    "subtopic": "DMS_SUBTOPIC",
-    "author": {
-      "id": "sdobrovo",
-      "firstName": "Sergiu",
-      "lastName": "Dobrovolschi",
-      "email": "sdobrovo@revenue.ie"
-    },
-    "lastModifiedBy": null,
-    "dateCreated": 1510845003711,
-    "dateModified": null,
-    "status": "ACTIVE",
-    "dateExpiration": null,
-    "attachments": null
-  }
+    {
+        "id": "33748d64-e522-4ebd-acf5-a5b86c5fa78c",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "8c742f7a-5647-4464-9ab6-a875121c7ea2",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372072864,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "DMS_TOPIC",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372072864,
+        "dateModified": null,
+        "status": "ACTIVE",
+        "dateExpiration": null,
+        "attachments": null
+    }
 ]

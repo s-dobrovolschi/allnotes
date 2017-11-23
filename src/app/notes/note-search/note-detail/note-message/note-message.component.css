@@ -1,0 +1,23 @@
+.an-message {
+	padding: 10px;
+/*     margin-left: 20%; */
+/*     margin-right: 10px; */
+/*     margin-top: 15px; */
+/*     margin-bottom: 10px; */
+    background: #ebedf0;
+    border-radius: 3px;
+}
+
+.an-message-left {
+	margin: 10px 20% 15px 10px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-left-color: #f7d800;
+}
+
+.an-message-right {
+	margin: 10px 10px 15px 20%;
+    border: 1px solid #eee;
+    border-right-width: 5px;
+    border-right-color: #68bb5e;
+}

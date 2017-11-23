@@ -1,5 +1,7 @@
-.ui-g div {
-  background-color: #ededed;
-  text-align: center;
-  border: 1px solid #fafafa;
+>>> .ui-panel .ui-panel-titlebar {
+	font-family: 'Fira Sans', sans-serif;
+	background: #099;
+	font-size: larger;
+    font-weight: 600;
+    color: white;
 }

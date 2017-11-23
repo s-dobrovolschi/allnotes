@@ -1,4 +1,4 @@
-<p-panel *ngIf="render" header="Result" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+<p-panel *ngIf="render" header="Search results" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
   <div class="ui-g">
     <div class="ui-g-12 ui-g-nopad">
       <div *ngIf="customer; else noCustomerFoundBlock">
@@ -16,8 +16,10 @@
           <p-column field="status" header="Status"></p-column>
           <p-column header="Attachments">
             <ng-template let-note="rowData" pTemplate="body">
-              <div *ngIf="note.attachments" style="text-align:center"><span class="badge">{{note.attachments.length}}</span><i class="fa fa-paperclip fa-2x"></i></div>
-            </ng-template>
+			<div *ngIf="note.attachments" style="text-align: center">
+				<i class="fa fa-paperclip fa-2x"></i><span class="an-attachment-badge badge">{{note.attachments.size}}</span>
+			</div>
+			</ng-template>
           </p-column>
         </p-dataTable>
       </div>

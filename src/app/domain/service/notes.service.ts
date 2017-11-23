@@ -1,4 +1,3 @@
-import {NotesMock} from '../mock/notesmock';
 import {Note} from '../model/note';
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';

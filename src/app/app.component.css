@@ -1,10 +1,10 @@
 .layout-wrapper {
-  margin-top: 80px;
+  margin-top: 115px;
 }
 
 >>> .ui-growl {
   position: fixed;
-  top: 80px;
+  top: 115px;
   right: 20px;
   width: 20em;
 }

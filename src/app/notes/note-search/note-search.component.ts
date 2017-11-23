@@ -1,9 +1,9 @@
 import {Note} from '../../domain/model/note';
 import {NotesService} from '../../domain/service/notes.service';
 import {Component, OnInit} from '@angular/core';
-import {CustomersService} from "../../domain/service/customers.service";
-import {Customer} from "../../domain/model/customer";
-import {MessageService} from "primeng/components/common/messageservice";
+import {CustomersService} from '../../domain/service/customers.service';
+import {Customer} from '../../domain/model/customer';
+import {MessageService} from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'app-note-search',
@@ -32,7 +32,7 @@ export class NoteSearchComponent implements OnInit {
     this.searchCustomerAction = true;
     this.customersService.searchCustomer(this.searchString).subscribe(
       result => {
-        if(result){
+        if (result) {
           this.customerFound = result;
           this._searchNotesByCustomer();
         }
@@ -40,7 +40,7 @@ export class NoteSearchComponent implements OnInit {
     );
   }
 
-  private _searchNotesByCustomer(): void{
+  private _searchNotesByCustomer(): void {
     this.notesService.searchNotes(this.searchString).subscribe(
       result => {
         this.searchResult = result;
@@ -63,7 +63,7 @@ export class NoteSearchComponent implements OnInit {
     this.selectedNote = selectedNote;
   }
 
-  onCreateNote(){
+  onCreateNote() {
     this.createNoteAction = true;
   }
 

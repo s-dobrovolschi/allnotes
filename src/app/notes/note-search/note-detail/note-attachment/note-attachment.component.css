@@ -1,0 +1,15 @@
+
+>>> .an-attachment-header .ui-panel.ui-widget .ui-panel-titlebar {
+	background: #ebedf0;
+	color: black;
+	font-size: small;
+}
+
+>>> .ui-menu {
+    width: 9.5em;
+    padding: 0;
+}
+
+.an-attachment-btn {
+	float: right;
+}

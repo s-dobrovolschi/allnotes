@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
 import { NoteSearchComponent } from './notes/note-search/note-search.component';
@@ -22,6 +23,10 @@ import {EditorModule} from 'primeng/primeng';
 import {OrderListModule} from 'primeng/primeng';
 import { NoteCreateComponent } from './notes/note-search/note-create/note-create.component';
 import {MessageService} from 'primeng/components/common/messageservice';
+import {SplitButtonModule} from 'primeng/primeng';
+import {MenuModule,MenuItem} from 'primeng/primeng';
+import { NoteMessageComponent } from './notes/note-search/note-detail/note-message/note-message.component';
+import { NoteAttachmentComponent } from './notes/note-search/note-detail/note-attachment/note-attachment.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +39,20 @@ import {MessageService} from 'primeng/components/common/messageservice';
     NoteDetailComponent,
     HeaderComponent,
     LoginComponent,
-    NoteCreateComponent
+    NoteCreateComponent,
+    NoteMessageComponent,
+    NoteAttachmentComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    RouterModule.forRoot([
+       {
+          path:'',
+          redirectTo:'app',
+          pathMatch:'full',
+       }]),
     HttpClientModule,
     // PrimeNG Modules Declaration
     ToolbarModule,
@@ -49,7 +62,9 @@ import {MessageService} from 'primeng/components/common/messageservice';
     ButtonModule,
     GrowlModule,
     EditorModule,
-    OrderListModule
+    OrderListModule,
+    SplitButtonModule,
+    MenuModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

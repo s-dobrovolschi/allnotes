@@ -1,3 +1,4 @@
+import { Message } from './message';
 import { User } from './user';
 
 export interface Note {
@@ -5,7 +6,7 @@ export interface Note {
   customerNumber: string;
   customerName?: string;
   title: string;
-  content: string;
+  messages: Message[];
   application?: string;
   category?: string;
   source?: string;

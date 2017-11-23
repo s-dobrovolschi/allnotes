@@ -1,16 +1,14 @@
-import {Note} from '../../../domain/model/note';
-import {Component, OnInit, Input} from '@angular/core';
-import {MessageService} from 'primeng/components/common/messageservice';
+import {Component, OnInit} from '@angular/core';
 import {MenuItem} from 'primeng/primeng';
+import {MessageService} from 'primeng/components/common/messageservice';
 
 @Component({
-  selector: 'app-note-detail',
-  templateUrl: './note-detail.component.html',
-  styleUrls: ['./note-detail.component.css']
+  selector: 'app-note-attachment',
+  templateUrl: './note-attachment.component.html',
+  styleUrls: ['./note-attachment.component.css']
 })
-export class NoteDetailComponent implements OnInit {
+export class NoteAttachmentComponent implements OnInit {
 
-  @Input() note: Note;
   items: MenuItem[];
 
   constructor(private messageService: MessageService) {}
@@ -32,4 +30,5 @@ export class NoteDetailComponent implements OnInit {
   delete() {
     this.messageService.add({severity: 'info', summary: 'Success', detail: 'Attachment Deleted'});
   }
+
 }

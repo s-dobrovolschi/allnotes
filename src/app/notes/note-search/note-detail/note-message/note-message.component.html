@@ -1,0 +1,15 @@
+<div *ngFor="let message of messages; let index =index; let isOdd=odd; let isEven=even;" 
+		 [class.an-message-left]="isEven" [class.an-message-right]="isOdd" class="an-message">
+	<div class="ui-g">
+		<div class="ui-g-6 ui-g-nopad">
+			<h4>{{message.createdBy}}</h4>
+		</div>
+		<div class="ui-g-6 ui-g-nopad">
+			<h5><i class="fa fa-clock-o"></i><span>{{message.dateCreated}}</span></h5>
+		</div>
+		<div class="ui-g-12">
+		{{message.content}}
+		</div>
+		
+	</div>
+</div>
