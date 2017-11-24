@@ -5,7 +5,7 @@
 			<h4>{{message.createdBy}}</h4>
 		</div>
 		<div class="ui-g-6 ui-g-nopad">
-			<h5><i class="fa fa-clock-o"></i><span>{{message.dateCreated}}</span></h5>
+			<h5><i class="fa fa-clock-o"></i><span>{{message.dateCreated | date: 'dd/MM/yyyy HH:mm:ss'}}</span></h5>
 		</div>
 		<div class="ui-g-12">
 		{{message.content}}

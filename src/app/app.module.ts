@@ -27,6 +27,7 @@ import {SplitButtonModule} from 'primeng/primeng';
 import {MenuModule,MenuItem} from 'primeng/primeng';
 import { NoteMessageComponent } from './notes/note-search/note-detail/note-message/note-message.component';
 import { NoteAttachmentComponent } from './notes/note-search/note-detail/note-attachment/note-attachment.component';
+import {ProgressBarModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { NoteAttachmentComponent } from './notes/note-search/note-detail/note-at
     EditorModule,
     OrderListModule,
     SplitButtonModule,
-    MenuModule
+    MenuModule,
+    ProgressBarModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

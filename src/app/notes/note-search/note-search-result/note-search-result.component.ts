@@ -2,6 +2,7 @@ import {Note} from '../../../domain/model/note';
 import {NotesService} from '../../../domain/service/notes.service';
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import {Customer} from '../../../domain/model/customer';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-note-search-result',

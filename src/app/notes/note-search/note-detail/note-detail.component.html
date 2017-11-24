@@ -12,10 +12,10 @@
 		<div>
 			<h4>{{note.title}}</h4>
 		</div>
-		<h5>Created by {{note.author.firstName}}, {{note.author.lastName}} on {{note.dateCreated}}</h5>
+		<h5>Created by {{note.author.firstName}}, {{note.author.lastName}} on {{note.dateCreated | date: 'dd/MM/yyyy HH:mm:ss'}}</h5>
 		<span *ngIf="note.lastModifiedBy && note.dateModified">
 			<h5>Last modified by {{note.lastModifiedBy.firstName}}, {{note.lastModifiedBy.lastName}} on
-				{{note.dateModified}}</h5>
+				{{note.dateModified | date: 'dd/MM/yyyy HH:mm:ss'}}</h5>
 		</span>
 	</div>
 </div>
