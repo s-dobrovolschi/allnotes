@@ -1,48 +1,84 @@
-<p-panel *ngIf="render" header="Search results" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+<!-- <p-panel *ngIf="render" header="Search results" [toggleable]="true" [style]="{'margin-bottom':'20px'}"> -->
+<ng-container *ngIf="render">
+<hr>
   <div class="ui-g">
-  <div class="ui-g-12 ui-g-nopad">
-  	<p-progressBar mode="indeterminate" [style]="{'height': '10px'}"></p-progressBar>
-  </div>
-    <div class="ui-g-12 ui-g-nopad">
+  
+  
+    <div class="ui-g-10 ui-g-nopad">
       <div *ngIf="customer; else noCustomerFoundBlock">
         <h4>{{customer.customerNumber}} - {{customer.lastName}}, {{customer.firstName}}</h4>
+        <hr>
       </div>
       <ng-template #noCustomerFoundBlock>No customer found.</ng-template>
-      <div *ngIf="notes; else noNotesFoundBlock">
-        <h5>( {{notes.length}} results found )</h5>
-        <p-dataTable [value]="notes" selectionMode="single" [(selection)]="note" (click)="showSelectionDetails()"
-                     dataKey="id" [rows]="10" [paginator]="true">
-<!--           <p-column field="id" header="Note Id"><i class="fa fa-user"></i></p-column> -->
-          <p-column field="title" header="Title" filter="true" filterMatchMode="contains" [style]="{'width':'30%'}"></p-column>
-          <p-column header="Date created" [style]="{'width':'10%'}">
-            <ng-template let-note="rowData" pTemplate="body">
-				{{note.dateCreated | date: 'dd/MM/yyyy'}}
-			</ng-template>
-          </p-column>
-          <p-column field="author.id" header="Author"></p-column>
-          <p-column field="dateModified" header="Date modified"></p-column>
-          <p-column field="lastModifiedBy.id" header="Last modified"></p-column>
-          <p-column field="status" header="Status"></p-column>
-          <p-column header="Attachments" [style]="{'width':'10%'}">
-            <ng-template let-note="rowData" pTemplate="body">
-			<div *ngIf="note.attachments" style="text-align: center">
-				<i class="fa fa-paperclip fa-2x"></i><span class="an-attachment-badge badge">{{note.attachments.size}}</span>
-			</div>
-			</ng-template>
-          </p-column>
-          <p-column header="Messages" [style]="{'width':'10%'}">
-            <ng-template let-note="rowData" pTemplate="body">
-			<ng-container *ngIf="note.messages" >
-				<span class="an-attachment-badge badge">{{note.messages.length}} replies</span>
-			</ng-container>
-			</ng-template>
-          </p-column>
-        </p-dataTable>
-      </div>
-      <ng-template #noNoteFoundBlock>No note found for the customer</ng-template>
-    </div>
+     </div>
+     <div class="ui-g-2 ui-g-nopad">
+     	<button pButton type="button" class="ui-button-warning" label="Add Note" (click)="onCreateNote()" icon="fa-plus"></button>
+     </div>
+     <div *ngIf="loading else searchResultsBlock" class="ui-g-12 ui-g-nopad">
+		  	<p>Searching notes ...</p>
+		  	<p-progressBar [value]="progress"></p-progressBar>
+		  	<br>
+		<!-- 	<p-progressSpinner [style]="{width: '80px', height: '80px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner> -->
+	 </div>
+     <ng-template #searchResultsBlock> 
+	      <ng-container *ngIf="notes; else noNoteFoundBlock">
+	        <div class="ui-g-7 ui-g-offset-5 ui-g-nopad">
+	        <h5>( {{notes.length}} results found )</h5>
+	        </div>
+	<div class="ui-widget-header" style="padding: 4px 10px; border-bottom: 0 none; width: 100%">
+		<i class="fa fa-search" style="margin: 4px 4px 0 0"></i> <input #gb type="text" pInputText
+			size="50" placeholder="Global Filter">
+	</div>
+	<p-dataTable [value]="notes" selectionMode="single" [(selection)]="note" (click)="showSelectionDetails()"
+	                     dataKey="id" [rows]="10" [paginator]="true" #dataTable [globalFilter]="gb">
+	<!--           <p-column field="id" header="Note Id"><i class="fa fa-user"></i></p-column> -->
+	          <p-column field="topic" header="Topic" [filter]="true" filterMatchMode="equals" [style]="{'width':'20%'}">
+	          	<ng-template pTemplate="filter" let-col>
+            		<p-dropdown [options]="topics" [style]="{'width':'100%'}" (onChange)="dataTable.filter($event.value, col.field, col.filterMatchMode)" styleClass="ui-column-filter"></p-dropdown>
+        		</ng-template>
+	          </p-column>
+	          <p-column field="title" header="Title" filter="true" filterMatchMode="contains" filterPlaceholder="Search by title" [style]="{'width':'20%'}"></p-column>
+	          <p-column header="Date created" [style]="{'width':'10%'}" [sortable]="true">
+	            <ng-template let-note="rowData" pTemplate="body">	
+					{{note.dateCreated | date: 'dd/MM/yyyy'}}
+				</ng-template>
+	          </p-column>
+	          <p-column field="author.id" header="Author" [sortable]="true"></p-column>
+	          <p-column header="Date modified" [style]="{'width':'10%'}" [sortable]="true">
+	            <ng-template let-note="rowData" pTemplate="body">	
+					{{note.dateModified | date: 'dd/MM/yyyy'}}
+				</ng-template>
+	          </p-column>
+	          <p-column field="lastModifiedBy.id" header="Last modified" [sortable]="true"></p-column>
+	          <p-column header="Status" [sortable]="true">
+	          	<ng-template let-note="rowData" pTemplate="body">
+					<span *ngIf="note.status === 'OPEN'" class="label label-success">{{note.status}}</span>
+					<span *ngIf="note.status === 'CLOSED'" class="label label-danger">{{note.status}}</span>	          	
+	          	</ng-template>
+	          </p-column>
+	          <p-column header="Attachments" [style]="{'width':'10%'}">
+	            <ng-template let-note="rowData" pTemplate="body">
+				<div *ngIf="note.attachments" style="text-align: center">
+					<i class="fa fa-paperclip fa-2x"></i><span class="an-attachment-badge badge">{{note.attachments.size}}</span>
+				</div>
+				</ng-template>
+	          </p-column>
+	          <p-column header="Messages" [style]="{'width':'10%'}">
+	            <ng-template let-note="rowData" pTemplate="body">
+				<ng-container *ngIf="note.messages" >
+					<span class="an-attachment-badge badge">{{note.messages.length}} {{(note.messages.length) > 1 ? 'messages' : 'message'}}</span>
+				</ng-container>
+				</ng-template>
+	          </p-column>
+	        </p-dataTable>
+	      </ng-container>
+	      <ng-template #noNoteFoundBlock>No note found for the customer</ng-template>
+      </ng-template>
+      
+
   </div>
-</p-panel>
+<!-- </p-panel> -->
+</ng-container>
 
 
 

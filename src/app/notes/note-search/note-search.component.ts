@@ -4,6 +4,7 @@ import {NotesService} from '../../domain/service/notes.service';
 import {Component, OnInit} from '@angular/core';
 import {CustomersService} from '../../domain/service/customers.service';
 import {Customer} from '../../domain/model/customer';
+import {RenderStateEnum} from '../../domain/model/render-state-enum';
 import {AttachmentsService} from '../../domain/service/attachments.service';
 import {MessageService} from 'primeng/components/common/messageservice';
 
@@ -20,8 +21,9 @@ export class NoteSearchComponent implements OnInit {
   noteAttachments: Array<Attachment>;
   selectedNote: Note;
   customerFound: Customer;
-  createNoteAction: boolean = false;
   searchCustomerAction: boolean = false;
+  createNoteAction = false;
+  progress: number;
 
   constructor(
     private notesService: NotesService,
@@ -33,24 +35,38 @@ export class NoteSearchComponent implements OnInit {
   }
 
   onSearch() {
-    this.searchResult = null;
-    this.selectedNote = null;
-    this.customerFound = null;
-    this.searchCustomerAction = true;
-    this.customersService.searchCustomer(this.searchString).subscribe(
-      result => {
-        if (result) {
-          this.customerFound = result;
-          this._searchNotesByCustomer();
+    if (this.searchString) {
+      this.progress = 0;
+      this.searchCustomerAction = true;
+      this.searchResult = null;
+      this.selectedNote = null;
+      this.customerFound = null;
+      this.customersService.searchCustomer(this.searchString).subscribe(
+        result => {
+          if (result) {
+            this.customerFound = result;
+            this.progress = 30;
+            this._searchNotesByCustomer();
+          }
+        },
+        error => {
+          this.progress = 100;
         }
-      }
-    );
+
+      );
+    } else {
+      this._onClear();
+    }
+
+
   }
 
   private _searchNotesByCustomer(): void {
+    this.progress = 60;
     this.notesService.searchNotes(this.searchString).subscribe(
       result => {
         this.searchResult = result;
+        this.progress = 100;
       }
     );
   }
@@ -63,7 +79,7 @@ export class NoteSearchComponent implements OnInit {
     );
   }
 
-  onClear(): void {
+  private _onClear(): void {
     this.searchResult = null;
     this.searchString = '';
     this.selectedNote = null;
@@ -75,7 +91,7 @@ export class NoteSearchComponent implements OnInit {
   onNoteSelection(selectedNote: Note) {
     if (selectedNote.attachments) {
       this._getNoteAttachments(selectedNote);
-    }else {
+    } else {
       this.noteAttachments = null;
     }
     this.selectedNote = selectedNote;

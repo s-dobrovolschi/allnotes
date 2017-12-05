@@ -1,5 +1,11 @@
 <div class="ui-g">
-	<ng-container *ngIf="attachments else noAttachmentBlock">
+	<div class="ui-g-9 ui-g-nopad">
+		<h4>Attachments:</h4>
+	</div>
+	<div class="ui-g-3 ui-g-nopad">
+		<button *ngIf="editModeEnabled" pButton type="button" class="ui-button-warning" label="Attach File" (click)="onUploadAttachment()" icon="fa-paperclip"></button>
+	</div>
+	<ng-container *ngIf="attachments; else noAttachmentBlock">
 	<div *ngFor="let attachment of attachments" class="ui-g-12">
 		<p-panel class="an-attachment-header" header="{{attachment.name}}" [toggleable]="true"
 			[collapsed]="false">
@@ -17,7 +23,7 @@
 			<div class="ui-g-4 ui-g-nopad">Author:</div>
 			<div class="ui-g-8 ui-g-nopad">{{attachment.author.firstName}}, {{attachment.author.lastName}}</div>
 			<div class="ui-g-4 ui-g-nopad">Created:</div>
-			<div class="ui-g-8 ui-g-nopad">{{attachment.dateCreated}}</div>
+			<div class="ui-g-8 ui-g-nopad">{{attachment.dateCreated | date: 'dd/MM/yyyy HH:mm:ss'}}</div>
 			<div class="ui-g-4 ui-g-nopad">File type:</div>
 			<div class="ui-g-8 ui-g-nopad">{{attachment.format}}</div>
 			<div class="ui-g-4 ui-g-nopad">Status:</div>
@@ -27,12 +33,12 @@
 	</div>
 	</ng-container>
 	<ng-template #noAttachmentBlock>
-	<div class="ui-g-12">
-		<p>No attachments</p>
-	</div>
+		<div class="ui-g-12">
+			<p>No attachments</p>
+		</div>
+		<div class="ui-g-12">
+			<h5><i class="fa fa-exclamation-triangle fa-2x"></i> Unable to load attachments</h5>
+		</div>
 	</ng-template>
 	
-	<div class="ui-g-12 ui-g-nopad">
-		<h5><i class="fa fa-exclamation-triangle fa-2x"></i> Unable to load attachments</h5>
-	</div>
 </div>

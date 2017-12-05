@@ -1,0 +1,16 @@
+{
+    "id": "111",
+    "name": "Tax Credit 2015.pdf",
+    "format": "PDF",
+    "author": {
+        "id": "rimoore",
+        "firstName": "Richard",
+        "lastName": "Moore",
+        "email": "rimoore@revenue.ie"
+    },
+    "lastModifiedBy": null,
+    "dateCreated": 1511133521299,
+    "dateModified": null,
+    "status": "ACTIVE",
+    "dateExpiration": null
+}

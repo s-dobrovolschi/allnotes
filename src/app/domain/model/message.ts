@@ -1,6 +1,6 @@
 export interface Message {
-  id: string;
+  id?: string;
   content: string;
-  dateCreated: Date;
-  createdBy: string;
+  dateCreated?: Date;
+  createdBy?: string;
 }

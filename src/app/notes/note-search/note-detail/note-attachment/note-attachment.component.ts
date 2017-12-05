@@ -12,6 +12,7 @@ export class NoteAttachmentComponent implements OnInit {
 
   items: MenuItem[];
   @Input() attachments: Array<Attachment>;
+  @Input() editModeEnabled: boolean;
 
   constructor(private messageService: MessageService) {}
 

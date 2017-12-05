@@ -8,3 +8,15 @@ hr {
     border: 0;
     border-top: 1px solid #eee;
 }
+
+.an-button-action {
+	color: #222222;
+	background: #eee;
+	border: 1px solid #eee;
+}
+
+.an-button-message {
+	float: right;
+    margin-top: 10px;
+}
+

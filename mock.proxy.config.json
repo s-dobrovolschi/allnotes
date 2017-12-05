@@ -15,12 +15,36 @@
 			"^/api.*": ""
 		}
 	},
-	"/api/notes": {
-		"target": "http://localhost.revenuedomain.ie:8080/allnotes/rest",
+	"/api/notes/c525e75f-07d1-4ff1-9e15-7f4990fe92a1/attachments/111/details": {
+		"target": "http://localhost:4200/assets/mock/attachments/Res_111_AttachmentDetails.json",
 		"secure": false,
 		"logLevel": "debug",
 		"pathRewrite": {
-			"^/api": ""
+			"^/api.*": ""
+		}
+	},
+	"/api/notes/c525e75f-07d1-4ff1-9e15-7f4990fe92a1/attachments/333/details": {
+		"target": "http://localhost:4200/assets/mock/attachments/Res_333_AttachmentDetails.json",
+		"secure": false,
+		"logLevel": "debug",
+		"pathRewrite": {
+			"^/api.*": ""
+		}
+	},
+	"/api/notes/63b0d2a4-6d92-4308-b695-d394dffaf4cb/attachments/111/details": {
+		"target": "http://localhost:4200/assets/mock/attachments/Res_111_AttachmentDetails.json",
+		"secure": false,
+		"logLevel": "debug",
+		"pathRewrite": {
+			"^/api.*": ""
+		}
+	},
+	"/api/notes/63b0d2a4-6d92-4308-b695-d394dffaf4cb/attachments/333/details": {
+		"target": "http://localhost:4200/assets/mock/attachments/Res_333_AttachmentDetails.json",
+		"secure": false,
+		"logLevel": "debug",
+		"pathRewrite": {
+			"^/api.*": ""
 		}
 	}
 }

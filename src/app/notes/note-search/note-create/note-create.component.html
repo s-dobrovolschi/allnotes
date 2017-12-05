@@ -1,24 +1,57 @@
 <p-panel *ngIf="render" header="Create new note" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
   <div class="ui-g">
     <div class="ui-g-12 ui-g-nopad">
-<!--       <p-toolbar> -->
         <div class="ui-toolbar-group-right">
           <button pButton type="button" label="Save" (click)="onSave()" class="ui-button-success" icon="fa-floppy-o"></button>
-          <i class="fa fa-bars"></i>
-          <button pButton type="button" label="Edit" icon="fa-pencil" class="ui-button-info"></button>
-          <button pButton type="button" label="Delete" icon="fa-trash" class="ui-button-danger"></button>
+			<button pButton type="button" label="Cancel" (click)="onCancel()" class="an-button-action" icon="fa-times"></button>
         </div>
-<!--       </p-toolbar> -->
       <h4>Title:</h4>
       <div>
-        <input type="text" pInputText placeholder="Title " [(ngModel)]="_title">
+        <input type="text" pInputText placeholder="Title " [(ngModel)]="title">
       </div>
-      <h4>Source:</h4>
-      <input type="text" pInputText placeholder="Source" [(ngModel)]="_source">
-      <h4>Note:</h4>
-<!--       <textarea rows="5" cols="100" pInputTextarea [(ngModel)]="_content"></textarea> -->
-      <p-editor [(ngModel)]="_content" [style]="{'height':'320px'}"></p-editor>
+      <h4>Topic:</h4>
+      <p-dropdown [options]="topics" [style]="[{'border': '1px solid #d6d6d6'}]" [(ngModel)]="topic" [filter]="true" filterBy="label,value.name" styleClass="ui-column-filter"></p-dropdown>
+      
+     </div>
+     <div class="ui-g-6">
+      <h4>Message:</h4>
+      <p-editor [(ngModel)]="messageContent" [style]="{'height':'150px'}">
+			<p-header>
+		        <span class="ql-formats">
+                    <select class="ql-header">
+                      <option value="2">Heading</option>
+                      <option value="3">Subheading</option>
+                      <option selected>Normal</option>
+                    </select>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-bold" aria-label="Bold"></button>
+                    <button class="ql-italic" aria-label="Italic"></button>
+                    <button class="ql-underline" aria-label="Underline"></button>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-list" value="ordered" aria-label="Ordered List"></button>
+                    <button class="ql-list" value="bullet" aria-label="Unordered List"></button>
+                    <select class="ql-align">
+                        <option selected></option>
+                        <option value="center"></option>
+                        <option value="right"></option>
+                        <option value="justify"></option>
+                    </select>
+                </span>
+    		</p-header>
+		</p-editor>
     </div>
-  </div>
+	<div class="ui-g-6 an-vertical-rule">
+		<h4>Attachments:</h4>
+		<p-fileUpload name="attachment" (uploadHandler)="onUpload($event)" multiple="multiple" maxFileSize="1000000">
+			<ng-template pTemplate type="content">
+				<ul *ngIf="uploadedFiles.length">
+					<li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+				</ul>
+			</ng-template>
+		</p-fileUpload>
+	</div>
+</div>
 </p-panel>
 

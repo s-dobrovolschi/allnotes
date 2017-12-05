@@ -1,16 +1,27 @@
 <p-panel *ngIf="note" header="Note details" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
 <div class="ui-g">
+	<div *ngIf="!isNoteActive()" class="ui-g-12 ui-g-nopad" style="background: aliceblue;">
+		<span class="label label-primary">Info</span><h5><i> The note is closed and changes cannot be applied.</i></h5>
+	</div>
+	
 	<div class="ui-g-12 ui-g-nopad">
-		<!-- 		<p-toolbar> -->
-		<div class="ui-toolbar-group-right">
-			<button pButton type="button" label="Save" class="ui-button-success" icon="fa-floppy-o"></button>
-			<button pButton type="button" label="Edit" class="ui-button-info" icon="fa-pencil"></button>
-			<i class="fa fa-bars"></i>
-			<button pButton type="button" label="Delete" class="ui-button-danger" icon="fa-trash"></button>
+		<div *ngIf="isNoteActive()" class="ui-toolbar-group-right">
+			<ng-container *ngIf="!editMode; else btnSaveCloseBlock">
+				<button pButton type="button" label="Edit" (click)="enableEditMode()" class="an-button-action" icon="fa-pencil"></button>
+				<button pButton type="button" label="Delete" class="an-button-action" icon="fa-trash"></button>
+			</ng-container>
+			<ng-template #btnSaveCloseBlock>
+				<button pButton type="button" label="Save" class="ui-button-success" icon="fa-floppy-o"></button>
+				<button pButton type="button" label="Close" (click)="closeEditMode()" class="an-button-action" icon="fa-times"></button>
+			</ng-template>
 		</div>
-		<!-- 		</p-toolbar> -->
 		<div>
-			<h4>{{note.title}}</h4>
+			<ng-container *ngIf="!editMode; else editTitleBlock">
+				<h3>{{note.title}}</h3>
+			</ng-container>
+			<ng-template #editTitleBlock>
+				<h5><i>Title:</i></h5><input type="text" pInputText [(ngModel)]="note.title">			
+			</ng-template>
 		</div>
 		<h5>Created by {{note.author.firstName}}, {{note.author.lastName}} on {{note.dateCreated | date: 'dd/MM/yyyy HH:mm:ss'}}</h5>
 		<span *ngIf="note.lastModifiedBy && note.dateModified">
@@ -18,22 +29,54 @@
 				{{note.dateModified | date: 'dd/MM/yyyy HH:mm:ss'}}</h5>
 		</span>
 	</div>
+	<br>
+	<div class="ui-g-12 ui-g-nopad">
+		<ng-container *ngIf="!editMode; else editTopicBlock">
+			<h4>Topic: {{note.topic}}</h4>
+		</ng-container>
+		<ng-template #editTopicBlock>
+			<h5><i>Topic:</i></h5><input type="text" pInputText [(ngModel)]="note.topic">			
+		</ng-template>
+	</div>
+	
 </div>
 <hr>
 <div class="ui-g">
-	<div class="ui-g-6 ui-g-nopad">
-		<h4>Source:</h4>
-		<input type="text" pInputText placeholder="Username" [(ngModel)]="note.source" disabled="true">
-		<h4>Note:</h4>
+	<div class="ui-g-6">
+		<h4>Messages:</h4>
 		<app-note-message [messages]="note.messages"></app-note-message>
-		<textarea rows="3" cols="75" pInputTextarea [(ngModel)]="note.content"></textarea>
-		<button pButton type="button" label="Send" icon="fa-pencil" class="ui-button-warning"></button>
+		<ng-container *ngIf="isNoteActive()">
+			<p-editor [(ngModel)]="message" [style]="{'height':'150px'}">
+			<p-header>
+		        <span class="ql-formats">
+                    <select class="ql-header">
+                      <option value="1">Heading</option>
+                      <option value="2">Subheading</option>
+                      <option selected>Normal</option>
+                    </select>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-bold" aria-label="Bold"></button>
+                    <button class="ql-italic" aria-label="Italic"></button>
+                    <button class="ql-underline" aria-label="Underline"></button>
+                </span>
+                <span class="ql-formats">
+                    <button class="ql-list" value="ordered" aria-label="Ordered List"></button>
+                    <button class="ql-list" value="bullet" aria-label="Unordered List"></button>
+                    <select class="ql-align">
+                        <option selected></option>
+                        <option value="center"></option>
+                        <option value="right"></option>
+                        <option value="justify"></option>
+                    </select>
+                </span>
+    		</p-header>
+		</p-editor>
+		<button class="an-button-message" pButton type="button" label="Send" (click)="saveMessage()" icon="fa-paper-plane" ></button>
+		</ng-container>
 	</div>
 	<div class="ui-g-6 an-vertical-rule">
-		<div class="ui-g-12 ui-g-nopad">
-			<h4>Attachments:</h4>
-			<app-note-attachment [attachments]="attachments"></app-note-attachment>
-		</div>
+		<app-note-attachment [editModeEnabled]="isNoteActive()" [attachments]="attachments"></app-note-attachment>
 	</div>
 </div>
 </p-panel>

@@ -3,59 +3,68 @@
         "id": "c525e75f-07d1-4ff1-9e15-7f4990fe92a1",
         "customerNumber": "4000098F",
         "customerName": null,
-        "title": "Sample customer note",
+        "title": "Case Amargosa Ltd taxation 2015",
         "messages": [
+        	{
+                "id": "acafbc67-e288-46f1-865e-d54140d1",
+                "content": "Missing approval from sdobrovo. \n Expiration date is 10/11/17",
+                "dateCreated": 1511372076242,
+                "createdBy": "rimoore"
+            },
             {
                 "id": "acafbc67-e288-46f1-865e-d54140d1",
-                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "content": "Case assigned to: rimoore.",
                 "dateCreated": 1511372076242,
                 "createdBy": "sdobrovo"
             },
             {
                 "id": "acafbc67-e288-46f1-865e-d54140d2",
-                "content": "Need an approval from the secretary.",
+                "content": "Company: Amargosa Ltd \n Created: 10/11/17\r\n\\par Chargeholder: Lloyds Bank PLC, Pendeford Business Park, Wobaston Rd, Wolverhampton, WV9 5HZ, England",
                 "dateCreated": 1511372076242,
-                "createdBy": "jpmorgan"
+                "createdBy": "rimoore"
             },
             {
                 "id": "acafbc67-e288-46f1-865e-d54140d3",
-                "content": "Got the approval and parking the case.",
-                "dateCreated": 1511372076242,
-                "createdBy": "sdobrovo"
+                "content": "ee full S1001 Notification on IC Corr Dated 14/11/17",
+                "dateCreated": 1511372096242,
+                "createdBy": "rimoore"
             }
         ],
         "application": "DMS",
         "category": "CUSTOMER",
-        "source": "DMS",
-        "topic": "DMS_TOPIC",
-        "subtopic": "DMS_SUBTOPIC",
+        "source": "Case Merge",
+        "topic": "Case Merge",
+        "subtopic": "Case Merge Subtopic",
         "author": {
-            "id": "sdobrovo",
-            "firstName": "Sergiu",
-            "lastName": "Dobrovolschi",
-            "email": "sdobrovo@revenue.ie"
+            "id": "rimoore",
+            "firstName": "Richard",
+            "lastName": "Moore",
+            "email": "rimoore@revenue.ie"
         },
         "lastModifiedBy": {
-            "id": null,
-            "firstName": null,
-            "lastName": null,
-            "email": null
+            "id": "rimoore",
+            "firstName": "Richard",
+            "lastName": "Moore",
+            "email": "rimoore@revenue.ie"
         },
         "dateCreated": 1511372076242,
-        "dateModified": null,
-        "status": "ACTIVE",
+        "dateModified": 1511372076242,
+        "status": "OPEN",
         "dateExpiration": null,
-        "attachments": null
+        "attachments": {
+            "111": "Tax Credit 2015.pdf",
+            "333": "Proof of payment ref taxation year 2015.pdf"
+        }
     },
     {
         "id": "63b0d2a4-6d92-4308-b695-d394dffaf4cb",
         "customerNumber": "4000098F",
         "customerName": null,
-        "title": "Sample customer note",
+        "title": "Income of non-resident from shipping",
         "messages": [
             {
                 "id": "ef2a3729-b651-45d4-8e98-0f88eab252de",
-                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "content": "Income earned during the previous year is taxed during the assessment year. Therefore a year isan assessment year and previous year simultaneously",
                 "dateCreated": 1511372060010,
                 "createdBy": "sdobrovo"
             }
@@ -63,7 +72,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "DMS",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -79,10 +88,10 @@
         },
         "dateCreated": 1511372060010,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "CLOSED",
         "dateExpiration": null,
         "attachments": {
-            "111": "Proof of payment ref taxation year 2015.pdf",
+            "111": "Tax Credit 2015.pdf",
             "333": "Proof of payment ref taxation year 2015.pdf"
         }
     },
@@ -90,11 +99,11 @@
         "id": "1cc148e6-fd59-4fc0-a1e4-e3524f768b15",
         "customerNumber": "4000098F",
         "customerName": null,
-        "title": "Sample customer note",
+        "title": "Property income: Rs. 42,000/- every year",
         "messages": [
             {
                 "id": "5cf3a173-5a12-4c16-b365-459c96a8eec0",
-                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "content": "The income of X comprises of only property income till March 10, 2006.",
                 "dateCreated": 1511372071991,
                 "createdBy": "sdobrovo"
             }
@@ -102,7 +111,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "DMS",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -118,7 +127,7 @@
         },
         "dateCreated": 1511372071991,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": null
     },
@@ -126,11 +135,11 @@
         "id": "1e782ccf-d751-4893-92af-6223049eed20",
         "customerNumber": "4000098F",
         "customerName": null,
-        "title": "Sample customer note",
+        "title": "Business income",
         "messages": [
             {
                 "id": "66068b9c-db84-4047-80a4-5b270b302530",
-                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "content": "Business income: Rs 10,000/- for the period ending 31 March 2006 and Rs.56000/-for the period ending 31 march 2007.",
                 "dateCreated": 1511372074575,
                 "createdBy": "sdobrovo"
             }
@@ -138,7 +147,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Case Merge",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -154,7 +163,7 @@
         },
         "dateCreated": 1511372074575,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": {
             "111": "Proof of payment ref taxation year 2015.pdf"
@@ -176,7 +185,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Case Merge",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -192,7 +201,7 @@
         },
         "dateCreated": 1511372068943,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": null
     },
@@ -212,7 +221,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Case Merge",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -228,7 +237,7 @@
         },
         "dateCreated": 1511372071092,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "CLOSED",
         "dateExpiration": null,
         "attachments": null
     },
@@ -248,7 +257,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Assets",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -264,7 +273,7 @@
         },
         "dateCreated": 1511372070060,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": null
     },
@@ -284,7 +293,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Exemptions",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -300,7 +309,7 @@
         },
         "dateCreated": 1511372075421,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": null
     },
@@ -320,7 +329,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Exemptions",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -336,7 +345,7 @@
         },
         "dateCreated": 1511372073763,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": null
     },
@@ -356,7 +365,7 @@
         "application": "DMS",
         "category": "CUSTOMER",
         "source": "DMS",
-        "topic": "DMS_TOPIC",
+        "topic": "Assets",
         "subtopic": "DMS_SUBTOPIC",
         "author": {
             "id": "sdobrovo",
@@ -372,7 +381,223 @@
         },
         "dateCreated": 1511372072864,
         "dateModified": null,
-        "status": "ACTIVE",
+        "status": "OPEN",
+        "dateExpiration": null,
+        "attachments": null
+    },
+    {
+        "id": "609b256d-d17e-4347-9596-dbaa3e605c80",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "a56e5518-0e44-4084-ad9b-cf3560bf88cc",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372068943,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "Case Merge",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372068943,
+        "dateModified": null,
+        "status": "OPEN",
+        "dateExpiration": null,
+        "attachments": null
+    },
+    {
+        "id": "39a4b602-49e1-438b-a02b-7702dc0593bf",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "40c508a3-f7c4-4760-bcb4-b4f32f2bf9c9",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372071092,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "Case Merge",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372071092,
+        "dateModified": null,
+        "status": "CLOSED",
+        "dateExpiration": null,
+        "attachments": null
+    },
+    {
+        "id": "ee3bf304-3171-41cd-8efd-18e7bf686e47",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "a81a50a5-870f-4806-b8fa-7d0345b1978f",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372070060,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "Assets",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372070060,
+        "dateModified": null,
+        "status": "OPEN",
+        "dateExpiration": null,
+        "attachments": null
+    },
+    {
+        "id": "d1f8d60a-8125-4369-8b07-0163b63cd825",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "5d385f1e-0343-4ba3-b688-d7a19284fb6d",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372075421,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "Exemptions",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372075421,
+        "dateModified": null,
+        "status": "OPEN",
+        "dateExpiration": null,
+        "attachments": null
+    },
+    {
+        "id": "5af2437b-672d-4b59-880c-6964942dd526",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "42682245-a9c4-4aad-83c8-eacaf5479753",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372073763,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "Exemptions",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372073763,
+        "dateModified": null,
+        "status": "OPEN",
+        "dateExpiration": null,
+        "attachments": null
+    },
+    {
+        "id": "33748d64-e522-4ebd-acf5-a5b86c5fa78c",
+        "customerNumber": "4000098F",
+        "customerName": null,
+        "title": "Sample customer note",
+        "messages": [
+            {
+                "id": "8c742f7a-5647-4464-9ab6-a875121c7ea2",
+                "content": "The customer sent to us the soft copy as a proof of payment.",
+                "dateCreated": 1511372072864,
+                "createdBy": "sdobrovo"
+            }
+        ],
+        "application": "DMS",
+        "category": "CUSTOMER",
+        "source": "DMS",
+        "topic": "Assets",
+        "subtopic": "DMS_SUBTOPIC",
+        "author": {
+            "id": "sdobrovo",
+            "firstName": "Sergiu",
+            "lastName": "Dobrovolschi",
+            "email": "sdobrovo@revenue.ie"
+        },
+        "lastModifiedBy": {
+            "id": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null
+        },
+        "dateCreated": 1511372072864,
+        "dateModified": null,
+        "status": "OPEN",
         "dateExpiration": null,
         "attachments": null
     }

@@ -1,19 +1,15 @@
 <p-panel header="Search notes" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
-<div class="ui-g">
-	<div class="ui-g-12 ui-g-nopad">Search customer: Ex. 4000098F</div>
-	<div class="ui-g-9">
-		<div class="ui-inputgroup">
-			<span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-			<input type="text" pInputText [(ngModel)]="searchString" placeholder="Customer number">
-      <button pButton type="button" label="Search" (click)="onSearch()" icon="fa-search"></button>
+	<div class="ui-g">
+		<div class="ui-g-8 ui-g-offset-4 ui-g-nopad"><h4><i>Please select a customer: Ex. 4000098F</i></h4></div>
+		<div class="ui-g-9 ui-g-offset-3">
+			<div class="ui-inputgroup">
+				<span class="ui-inputgroup-addon"><i style="padding: 0 5px;" class="fa fa-user fa-2x"></i></span>
+				<input type="text" style="width: 50%;" pInputText [(ngModel)]="searchString" placeholder="Customer number...">
+	      	<button pButton style="padding: 0 20px;" type="button" (click)="onSearch()" icon="fa-search fa-2x" pTooltip="Search customer notes" tooltipPosition="top"></button>
+			</div>
 		</div>
 	</div>
-	<div class="ui-g-2 ui-g-offset-1">
-    <button pButton type="button" class="ui-button-success" label="New"(click)="onCreateNote()" icon="fa-plus"></button>
-    <button pButton type="button" class="ui-button-warning" label="Clear" (click)="onClear()" icon="fa-trash-o"></button>
-	</div>
-</div>
+	<app-note-search-result *ngIf="searchCustomerAction" (createNoteAction)="onCreateNote($event)" [progress]="progress" [render]="searchCustomerAction" (noteSelection)="onNoteSelection($event)" [customer]="customerFound" [notes]="searchResult"></app-note-search-result>
 </p-panel>
-<app-note-search-result [render]="searchCustomerAction" (noteSelection)="onNoteSelection($event)" [customer]="customerFound" [notes]="searchResult"></app-note-search-result>
 <app-note-detail [note]="selectedNote" [attachments]="noteAttachments"></app-note-detail>
 <app-note-create [render]="createNoteAction"></app-note-create>

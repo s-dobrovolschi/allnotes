@@ -25,5 +25,10 @@ export class NotesService {
   searchNotes(customerNumber: string): Observable<Note[]> {
     return this.http.get<Note[]>(this._customersBaseUrl + '/' + customerNumber + '/notes?includeInactive=true');
   }
+  
+  createNote(note: Note) {
+    // TODO Remove the mock logic
+    this._notes.push(note);
+  }
 
 }
